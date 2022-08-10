@@ -40,3 +40,31 @@ function buildAccount(){
 
     }).catch((err) => console.log(err))
 }
+
+// add an amount to user account
+function deposit(){
+    inquirer.prompt([
+        {
+            name: 'accountName',
+            message: 'Qual o nome da sua conta?'
+        }
+    ]).then((answer) => {
+        const accountName = answer['accountName'];
+        // verify if account exists
+        if(!checkAccount(accountName)) return deposit()
+
+        inquirer.prompt([
+            {
+                name: 'amount',
+                message: `Quanto você deseja depositar?`
+            }
+        ]).then((answer) => {
+            const amount = answer['amount']
+            // add an amount
+            addAmount(accountName, amount)
+            operation()
+        }).catch((err) => console.log(err))
+
+    }).catch(err => console.log(err))
+}
+
