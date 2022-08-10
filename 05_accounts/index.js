@@ -121,3 +121,30 @@ function getAccountBalance(){
     }).catch((err) => console.log(err))
 }
 
+// withdraw an amount from user account
+function withDraw(){
+    inquirer.prompt([
+        {
+            name: 'accountName',
+            message: 'Qual o nome da sua conta?'
+        }
+    ]).then((answer) => {
+
+        const accountName = answer['accountName']
+
+        if(!checkAccount(accountName)) return withDraw()
+
+        inquirer.prompt([
+            {
+                name: 'amount',
+                message: 'Quanto você deseja sacar?'
+            }
+        ]).then((answer) => {
+            const amount = answer['amount']
+            removeAmount(accountName, amount)
+        }).catch(err => console.log(err))
+
+
+    }).catch(err => console.log(err))
+}
+
