@@ -148,3 +148,20 @@ function withDraw(){
     }).catch(err => console.log(err))
 }
 
+function removeAmount(accountName, amount){
+    const accountData = getAccount(accountName)
+    if(!amount){
+        console.log(chalk.bgRed.black('Ocorreu um erro, tente novamente mais tarde!'))
+        return withDraw()
+    }
+
+    if(accountData.balance < amount){
+        console.log(chalk.bgRed.black('Valor indisponível'))
+        return withDraw()
+    }
+    accountData.balance = parseFloat(accountData.balance) - parseFloat(amount)
+    fs.writeFileSync(`accounts/${accountName}.json`, JSON.stringify(accountData), (err) => console.log(err));
+
+    console.log(chalk.green(`Foi realizado um saque de R$${amount} da sua conta!`))
+    operation()
+}
