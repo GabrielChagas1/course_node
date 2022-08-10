@@ -68,3 +68,12 @@ function deposit(){
     }).catch(err => console.log(err))
 }
 
+function checkAccount(accountName){
+    if(!fs.existsSync(`accounts/${accountName}.json`)){
+        console.log(chalk.bgRed.black(`Está conta não existe, escolha outro nome!`))
+        return false
+    }
+
+    return true
+}
+
