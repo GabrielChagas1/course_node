@@ -1,0 +1,22 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+    background-color: tomato;
+    color: #fff;
+}
+
+.button{
+    background: #d4d4d4;
+    color: #000;
+    border-radius: .4rem;
+    /* margin: 1rem 0; */
+}
+
+a{
+    text-decoration: none;
+}
