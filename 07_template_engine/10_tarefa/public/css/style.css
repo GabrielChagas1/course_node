@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+
+:root{
+    --body-color: #dddff1;
+    --button-color: #de3c63;
+    --button-color-hover: #f5c5d0;
+    --white: #fff;
+    --black: #000
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--body-color);
+    font-family: 'Raleway', sans-serif;
+}
+
+.button{
+    background: var(--button-color);
+    color: var(--white);
+    padding: 5px;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+    transition: .5s;
+}
+
+.button:hover{
+    background: var(--button-color-hover);
+    color: var(--black);
+}
+
+.products__container{
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    justify-content: space-around;
+    margin: 2rem 0;
+}
+
+.card{
+    display: grid;
+    row-gap: .5rem;
+    background: var(--white);
+    border-radius: 4px;
+    padding: 1rem;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+}
