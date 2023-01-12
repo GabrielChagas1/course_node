@@ -68,7 +68,7 @@ app.post('/users/update', async (req, res) => {
     const occupation = req.body.occupation
     let newsletter = req.body.newsletter
 
-    newsletter === 'on' ? newsletter = true : newsletter = false;
+    //newsletter === 'on' ? newsletter = true : newsletter = false;
 
     const userData = {
         id,
