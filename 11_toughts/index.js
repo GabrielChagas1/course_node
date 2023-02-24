@@ -10,3 +10,7 @@ const app = express()
 // Models
 const Tought = require('./models/Tought')
 const User = require('./models/User')
+
+// Import Routes
+const toughtsRoutes = require('./routes/toughtsRoutes')
+const authRoutes = require('./routes/authRoutes')
