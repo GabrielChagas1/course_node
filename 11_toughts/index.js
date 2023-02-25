@@ -23,3 +23,5 @@ const ToughtController = require('./controllers/ToughtController')
 const hbs = exphbs.create({
     partialsDir: ['views/partials']
 })
+
+app.engine('handlebars', hbs.engine)
