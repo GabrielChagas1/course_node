@@ -17,3 +17,9 @@ const authRoutes = require('./routes/authRoutes')
 
 // Import Controller
 const ToughtController = require('./controllers/ToughtController')
+
+
+// template engine
+const hbs = exphbs.create({
+    partialsDir: ['views/partials']
+})
