@@ -72,3 +72,7 @@ app.use((req, res, next) => {
 app.use('/toughts', toughtsRoutes)
 app.use('/', authRoutes)
 
+// Page initial
+app.get('/', ToughtController.showToughts)
+
+
