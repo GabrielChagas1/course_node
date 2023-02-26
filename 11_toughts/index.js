@@ -78,3 +78,9 @@ app.get('/', ToughtController.showToughts)
 
 // banco de dados
 const conn = require('./db/conn')
+
+conn.sync()
+    .then(() => {
+        app.listen(3000)
+    })
+    .catch((err) => console.log(`Erro ao conectar ${err}`))
