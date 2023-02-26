@@ -76,3 +76,5 @@ app.use('/', authRoutes)
 app.get('/', ToughtController.showToughts)
 
 
+// banco de dados
+const conn = require('./db/conn')
