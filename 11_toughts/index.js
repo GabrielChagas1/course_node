@@ -53,3 +53,5 @@ app.use(
   }),
 )
 
+// flash messages
+app.use(flash());
