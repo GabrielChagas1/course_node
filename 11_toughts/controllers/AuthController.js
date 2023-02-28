@@ -32,3 +32,7 @@ const bcrypt = require('bcryptjs')
             res.redirect('/')
         })
     }
+
+    static register(req, res){
+        res.render('auth/register')
+    }
