@@ -2,6 +2,9 @@ const User = require('../models/User')
 
 const bcrypt = require('bcryptjs')
 
+
+
+module.exports = class AuthController{
     static login(req, res){
         res.render('auth/login')
     }
@@ -83,3 +86,9 @@ const bcrypt = require('bcryptjs')
         }
 
     }
+
+    static logout(req, res){
+        req.session.destroy()
+        res.redirect('/login')
+    }
+}
