@@ -83,3 +83,19 @@ module.exports = class ToughtController {
             console.log(`Erro na hora de criar um pensamento: ${error}`)
         }
     }
+
+    static async removeTought(req, res){
+        const id = req.body.id
+        const UserId = req.session.userid
+        
+        try {
+            await Tought.destroy({where:{id: id, UserId: UserId}})
+            req.flash('message', 'Pensamento excluído com sucesso!')
+            req.session.save(() => {
+                res.redirect('/toughts/dashboard')
+            })            
+        } catch (error) {
+            console.log(`Erro na hora de remover o pensamento ${error}`)
+        }
+
+    }
