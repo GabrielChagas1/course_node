@@ -30,3 +30,28 @@ module.exports = class ToughtController {
 
         res.render('toughts/home', {toughts, search, toughtsQty})
     }
+
+    static async dashboard(req, res){
+        const userId = req.session.userid;
+
+        const user = await User.findOne({
+            where:{
+                id: userId
+            },
+            include: Tought,
+            plain: true
+        })
+
+        // check if
+        if(!user) res.redirect('/login')
+
+        const toughts = user.Toughts.map((result) => result.dataValues)
+
+        let emptyToughts = false
+
+        if(toughts.length === 0){
+            emptyToughts = true
+        }
+
+        res.render('toughts/dashboard', {toughts, emptyToughts})
+    }
