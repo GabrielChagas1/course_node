@@ -99,3 +99,15 @@ module.exports = class ToughtController {
         }
 
     }
+
+    static async updateTought(req, res){
+        const id = req.params.id
+
+        try {
+            const tought = await Tought.findOne({where: {id: id}, raw: true})
+            res.render('toughts/edit', {tought})
+
+        } catch (err) {
+            console.log(`Erro na hora de editar o pensamento ${err}`)
+        }
+    }
