@@ -6,3 +6,12 @@ const sequelize = new Sequelize('toughts', process.env.DB_USERNAME, process.env.
     host: process.env.DB_HOST,
     dialect: 'mysql'
 })
+
+try {
+    sequelize.authenticate();
+    console.log('Conectamos ao MySQL!')
+} catch (error) {
+    console.log(`Não foi possível conectar: ${error}`)
+}
+
+module.exports = sequelize
