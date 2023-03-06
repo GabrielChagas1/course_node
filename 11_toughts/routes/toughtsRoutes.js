@@ -4,3 +4,5 @@ const ToughtController = require('../controllers/ToughtController')
 
 // helper
 const checkAuth = require('../helpers/auth').checkAuth
+
+router.get('/add', checkAuth, ToughtController.createTought)
