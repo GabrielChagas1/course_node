@@ -66,3 +66,15 @@
     flex-direction: column;
 }
 
+.auth-container h2{
+    margin-bottom: 1em;
+    color: #fff;
+    border-left: 3px solid #f6982d;
+    padding: .3em;
+    width: 100px;
+}
+
+.auth-container a{
+    color: #f6982d;
+}
+
