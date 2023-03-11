@@ -78,3 +78,42 @@
     color: #f6982d;
 }
 
+.form-control{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: .5em;
+}
+
+.form-control label{
+    font-weight: bold;
+    margin-bottom: .5em;
+}
+
+.form-control input,
+.form-control textarea{
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #f6982d;
+}
+
+form input[type='submit'],
+.btn{
+    background-color: transparent;
+    color: #F6982D;
+    border: 2px solid #f6982d;
+    padding: .5em 1.2em;
+    margin-bottom: 1em;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: .5s;
+}
+
+form input[type='submit']:hover,
+.btn:hover{
+    background-color: #f6982d;
+    color: #fff;
+}
+
