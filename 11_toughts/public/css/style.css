@@ -185,3 +185,35 @@ form input[type='submit']:hover,
     border-color: #fff;
     margin: 0 .5em;
 }
+
+.home-header{
+    display: flex;
+    flex-direction: column;
+    max-width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.home-header span{
+    color: #f6982d;
+}
+
+.home-header p,
+.home-header form{
+    margin-bottom: 1.2em;
+}
+
+.home-header input{
+    border: none;
+    border-bottom: 1px solid #fff;
+    padding: .5em;
+    margin-right: 1em;
+}
+
+.home-header input[type='text']{
+    width: 60%;
+}
+
+.home-header input::placeholder{
+    color: #fff;
+}
