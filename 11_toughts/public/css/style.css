@@ -186,6 +186,7 @@ form input[type='submit']:hover,
     margin: 0 .5em;
 }
 
+/* Home */
 .home-header{
     display: flex;
     flex-direction: column;
@@ -264,3 +265,16 @@ form input[type='submit']:hover,
     color: #f6982d;
 }
 
+/* Footer */
+footer{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #F6982D;
+}
+
+footer span{
+    font-weight: bold;
+    color: #f6982d;
+}
