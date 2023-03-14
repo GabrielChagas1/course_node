@@ -7,3 +7,4 @@ const checkAuth = require('../helpers/auth').checkAuth
 
 router.get('/add', checkAuth, ToughtController.createTought)
 router.post('/add', checkAuth, ToughtController.createToughtSave)
+router.post('/edit/', checkAuth, ToughtController.updateToughtSave)
