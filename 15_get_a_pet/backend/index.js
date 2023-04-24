@@ -18,3 +18,6 @@ const PetRoutes = require('./routes/PetRoutes')
 
 app.use('/users', UserRoutes)
 app.use('/pets', PetRoutes)
+
+
+app.listen(5000)
