@@ -136,3 +136,35 @@ const ObjectId = require('mongoose').Types.ObjectId
 
     }
 
+    static async removePetById(req, res) {
+        const id = req.params.id
+
+        // check if id is valid
+        if (!ObjectId.isValid(id)) return res.status(422).json({
+            message: 'ID Inválido!'
+        })
+
+        // check if pet exists
+        const pet = await Pet.findOne({
+            _id: id
+        })
+        if (!pet) return res.status(404).json({
+            message: 'Pet não encontrado'
+        })
+
+        // check if logged un user  registered the pet
+        const token = getToken(req)
+        const user = await getUserByToken(token)
+
+        if (pet.user._id.toString() !== user._id.toString()) return res.status(404).json({
+            message: 'Houve um problema em processar a sua solicitação!'
+        })
+
+        await Pet.findByIdAndRemove(id)
+
+        res.status(200).json({
+            message: 'Pet Removido com sucesso!'
+        })
+
+    }
+
