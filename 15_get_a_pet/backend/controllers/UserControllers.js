@@ -109,3 +109,82 @@
         res.status(200).json(user)
 
     }
+
+    static async editUser(req, res) {
+        const {
+            name,
+            email,
+            phone,
+            password,
+            confirmpassword
+        } = req.body
+        const id = req.params.id
+
+        // check if user exists
+        const token = getToken(req)
+        const user = await getUserByToken(token)
+
+        if (!user) return res.status(422).json({
+            message: 'Usuário não encontrado!'
+        })
+
+
+        if(req.file){
+            user.image = req.file.filename
+        }
+
+        // validations
+        if (!name) return res.status(422).json({
+            message: 'O nome é obrigatório'
+        })
+        user.name = name
+
+        if (!email) return res.status(422).json({
+            message: 'O email é obrigatório'
+        })
+
+        // check if email has already
+        const userExists = await User.findOne({
+            email: email
+        })
+        if (user.email !== email && userExists) return res.status(422).json({
+            message: 'Esse email já existe'
+        })
+        user.email = email
+
+        if (!phone) return res.status(422).json({
+            message: 'O phone é obrigatório'
+        })
+        user.phone = phone
+
+
+        if (password !== confirmpassword) {
+            return res.status(402).json({
+                message: 'A senha e a confirmação precisam ser iguais!'
+            })
+        } else if (password === confirmpassword && password != null) {
+            // create a password
+            const salt = await bcrypt.genSalt(12)
+            const passwordHash = await bcrypt.hash(password, salt)
+            user.password = passwordHash
+        }
+
+        try {
+            await User.findOneAndUpdate({
+                _id: user._id
+            }, {
+                $set: user
+            }, {
+                new: true
+            })
+            res.status(200).json({
+                message: "Usuário atualizado com sucesso!"
+            })
+        } catch (err) {
+            return res.status(500).json({
+                message: err
+            })
+        }
+
+
+    }
