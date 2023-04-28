@@ -10,3 +10,4 @@ router.post('/create', verifyToken, imageUpload.array('images'), PetController.c
 router.get('/', PetController.getAll)
 router.get('/mypets', verifyToken, PetController.getAllUserPets)
 router.get('/myadoptions', verifyToken, PetController.getAllUserAdoptions)
+router.get('/:id', PetController.getPetById)
