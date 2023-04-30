@@ -17,3 +17,30 @@ import MyAdoptions from './components/pages/Pet/MyAdoptions';
 
 
 
+function App() {
+  return (
+    <Router>
+      <UserProvider>
+        <Navbar />
+        <Message />
+          <Container>
+            <Routes>
+              <Route path='/' element={<Home />}/>
+              <Route path='/login' element={<Login />} />
+              <Route path='/register' element={<Register />}/>
+              <Route path='/user/profile' element={<Profile />}/>
+              <Route path='/pet/mypets' element={<MyPets />}/>
+              <Route path='/pet/add' element={<AddPet />}/>
+              <Route path='/pet/edit/:id' element={<EditPet />}/>
+              <Route path='/pet/myadoptions' element={<MyAdoptions />}/>
+              <Route path='/pet/:id' element={<PetDetails />}/>
+            </Routes>
+          </Container>
+        <Footer />
+      </UserProvider>
+    </Router>
+    
+  );
+}
+
+export default App;
