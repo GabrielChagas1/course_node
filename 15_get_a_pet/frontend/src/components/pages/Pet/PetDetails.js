@@ -8,3 +8,8 @@ import {useParams, Link} from 'react-router-dom'
 
 // hooks
 import useFlashMessage from '../../../hooks/useFlashMessage'
+
+    const [pet, setPet] = useState({})
+    const {id} = useParams()
+    const {setFlashMessage} = useFlashMessage()
+    const [token] = useState(localStorage.getItem('token') || '')
