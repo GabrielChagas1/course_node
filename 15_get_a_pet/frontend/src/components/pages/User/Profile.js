@@ -11,3 +11,13 @@ import RoundedImage from '../../layout/RoundedImage'
     const [preview, setPreview] = useState()
     const [token] = useState(localStorage.getItem('token') || '')
     const {setFlashMessage} = useFlashMessage()
+
+    useEffect(() => {
+        api.get('/users/checkuser', {
+            headers:{
+                Authorization: `Bearer ${JSON.parse(token)}`
+            }
+        }).then((response) =>{
+            setUser(response.data)
+        })
+    }, [token])
