@@ -8,3 +8,11 @@ import useFlashMessage from './useFlashMessage'
     const {setFlashMessage} = useFlashMessage()
     const [authenticated, setAuthenticated] = useState(false)
     const navigate = useNavigate()
+
+    useEffect(() => {
+        const token = localStorage.getItem('token')
+        if(token){
+            api.defaults.headers.Authorization = `Bearer ${JSON.parse(token)}`
+            setAuthenticated(true)
+        } 
+    }, [])
