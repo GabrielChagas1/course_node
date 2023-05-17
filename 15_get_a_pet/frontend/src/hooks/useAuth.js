@@ -16,3 +16,22 @@ import useFlashMessage from './useFlashMessage'
             setAuthenticated(true)
         } 
     }, [])
+
+    async function register(user) {
+
+        let msgText = 'Cadastro realizado com sucesso!'
+        let msgType = 'success'
+
+        try {
+            const data = await api.post('/users/register', user).then((response) => {
+                return response.data
+            })
+           await authUser(data)
+        } catch (err) {
+            console.log(err)
+            msgText = err.response.data.messagef
+            msgType = 'error'
+        }
+
+        setFlashMessage(msgText, msgType)
+    }
