@@ -54,3 +54,24 @@ import useFlashMessage from './useFlashMessage'
         setFlashMessage(msgText, msgType)
 
     }
+
+    async function login(user){
+        let msgText = 'Login Realizado com sucesso'
+        let msgType = 'success'
+
+        try {
+            const data = await api.post('/users/login', user).then((response) => {
+                return response.data
+            })
+
+            await authUser(data)
+
+        } catch (err) {
+            msgText = err.response.data.message
+            msgType = 'error'
+        }
+
+        setFlashMessage(msgText, msgType)
+    }
+
+    return {authenticated, register, logout, login }
