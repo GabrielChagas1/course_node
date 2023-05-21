@@ -1,0 +1,5 @@
+criando projeto rapidamente{
+    npm init --yes or npm init -y
+
+    vai ser criado um projeto padrão
+}
