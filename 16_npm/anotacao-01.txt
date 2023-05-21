@@ -1,0 +1,10 @@
+verificando a versão do npm{
+    npm -v
+
+    a gente consegue ver se nosso npm está atualizado ou defasado!
+
+    problemas de versão, dão problemas no projeto
+
+    
+
+}
