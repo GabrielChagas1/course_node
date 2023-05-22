@@ -1,0 +1,3 @@
+exibidindo configurações do npm {
+    npm get => mostra todas as key que vão ser criadas e usadas assim que um projeto é criado
+}
