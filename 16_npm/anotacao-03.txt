@@ -1,0 +1,8 @@
+configuração do módulo{
+    npm config set init-author-name
+
+    isso precisa ser feito antes de criar o projeto
+    https://tidd.ly/3HzKE0I => site que informa quais itens podemos setar informações na hora de criar o projeto
+
+    deixar ambiente preparado para futuros pacotes
+}
