@@ -1,0 +1,5 @@
+deletando valores de configuração{
+    npm config delete <key> (autor)
+
+    deletar chaves que vc não quer usar mais no projeto
+}
