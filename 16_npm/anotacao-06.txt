@@ -1,0 +1,7 @@
+Instalação de módulo global{
+    npm install <pacote> -g
+    podemos ter um pacote que todos os projetos vão usar
+    
+    npm link <nome do pacote>
+    código para gerar um link do pacote instalado globalmente
+}
