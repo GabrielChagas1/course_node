@@ -1,0 +1,5 @@
+listando modulos instalados{
+    npm list ou ls => lista todas as dependencias do projeto
+    npm list ou ls -g => lista todas as dependências do projeto globais
+    npm list ou ls --depth=<numero da dependências> => lista o pacote naquela posição
+}
