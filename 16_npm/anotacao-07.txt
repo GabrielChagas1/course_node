@@ -1,0 +1,4 @@
+removendo módulos globais{
+ npm remove <nome do pacote> -g
+ código para remover um pacote global do projeto   
+}
