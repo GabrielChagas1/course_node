@@ -1,0 +1,3 @@
+limpando dependências não utilizadas{
+    npm prune => ele compara o que tem na pasta node_modules e o que tem no package-json e remove o pacote que vc tirar de lá manualmente
+}
