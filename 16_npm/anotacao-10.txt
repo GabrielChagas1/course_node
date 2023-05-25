@@ -1,0 +1,3 @@
+procurando modulos pelo terminal{
+    npm search <nome do pacote> ou nome de algo
+}
