@@ -1,0 +1,3 @@
+verificando e limpando cache do npm{
+    npm cache verify
+}
