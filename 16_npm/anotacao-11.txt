@@ -1,0 +1,4 @@
+verificando dependencias que podem ser atualizadas{
+    npm outdated => mostrar as dependencias que precisam ser atualizadas
+    npm updated => atualizar essas dependencias
+}
