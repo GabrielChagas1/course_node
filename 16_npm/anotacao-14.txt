@@ -1,0 +1,4 @@
+corrigindo vulnerabilidades dos pacotes{
+    npm audit fix
+    npm audit fix --force
+}
