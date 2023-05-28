@@ -1,0 +1,3 @@
+acessando documentação do pacote{
+    npm docs <nome do pacote>
+}
