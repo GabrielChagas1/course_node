@@ -1,0 +1,3 @@
+conhecendo pacotes com view{
+    npm view <nome do pacote>
+}
