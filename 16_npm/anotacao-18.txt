@@ -1,0 +1,3 @@
+reduzindo duplicação de pacotes{
+    npm dedupe => auditar e reduzir a duplicação dos pacotes
+}
