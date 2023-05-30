@@ -1,0 +1,5 @@
+instalando pacotes sem salvar na dependencias{
+    npm install <nome do pacote> --no-save
+
+    utilizar para testes
+}
