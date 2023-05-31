@@ -1,0 +1,3 @@
+verificando scripts do projeto{
+    npm run => mostrar dos os scripts que tem no json
+}
