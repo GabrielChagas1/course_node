@@ -1,0 +1,16 @@
+/* general */
+html, body, ul {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+ul {
+	list-style: none;
+}
+
+.container {
+	height: 100vh;
+	position: relative;
+}
+
