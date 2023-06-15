@@ -53,6 +53,7 @@ ul {
 	cursor: pointer;
 }
 
+/* notification container */
 .notification-container {
 	width: 100%;
 	height: 90px;
@@ -62,5 +63,19 @@ ul {
 	color: #384c56;
 	position: relative;
 	box-sizing: border-box;
+}
+
+.fas.fa-bell-slash {
+	width: 45px;
+	height: 45px;
+	text-align: center;
+	line-height: 45px;
+	border-radius: 50%;
+	font-size: 18px;
+	color: #9DE1FE;
+	background-color: #F5FCFF;
+	position: absolute;
+	top: 20px;
+	left: 15px;
 }
 
