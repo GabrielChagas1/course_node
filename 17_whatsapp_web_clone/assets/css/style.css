@@ -45,3 +45,10 @@ ul {
 	padding-right: 20px;
 }
 
+.auxicons-toolbar-container i {
+	color: #80868A;
+	font-size: 20px;
+	margin-left: 15px;
+	margin-right: 15px;
+	cursor: pointer;
+}
