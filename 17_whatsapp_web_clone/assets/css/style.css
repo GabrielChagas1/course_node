@@ -37,3 +37,11 @@ ul {
 	top: 10px;
 	background-color: #CCC;
 }
+
+.auxicons-toolbar-container {
+	float: right;
+	height: 60px;
+	line-height: 60px;
+	padding-right: 20px;
+}
+
