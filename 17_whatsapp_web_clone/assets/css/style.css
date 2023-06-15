@@ -79,3 +79,6 @@ ul {
 	left: 15px;
 }
 
+.notification-container p {
+	margin: 0;
+}
