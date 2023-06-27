@@ -82,3 +82,9 @@ ul {
 .notification-container p {
 	margin: 0;
 }
+
+.notification-container .receive-notification {
+	font-size: 15px;
+	margin-bottom: 3px;
+}
+
