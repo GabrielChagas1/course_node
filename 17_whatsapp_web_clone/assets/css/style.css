@@ -124,3 +124,9 @@ ul {
 	color: #BDC1C3;
 }
 
+/* contacts container */
+
+.contacts-container {
+	height: auto;
+	background-color: #FFF;
+}
