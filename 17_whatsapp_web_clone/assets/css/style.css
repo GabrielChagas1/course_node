@@ -140,3 +140,7 @@ ul {
 	box-sizing: border-box;
 }
 
+.contact-box:last-child {
+	border-bottom: 1px solid #f2f2f2;
+}
+
