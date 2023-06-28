@@ -152,3 +152,7 @@ ul {
 	background-color: #E9EBEB;
 }
 
+.active-chat.contact-box:hover {
+	background-color: #E9EBEB;
+}
+
