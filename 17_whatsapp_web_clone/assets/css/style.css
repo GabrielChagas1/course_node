@@ -130,3 +130,13 @@ ul {
 	height: auto;
 	background-color: #FFF;
 }
+
+.contact-box {
+	cursor: pointer;
+	height: 72px;
+	background-color: #FFF;
+	border-top: 1px solid #f2f2f2;
+	position: relative;
+	box-sizing: border-box;
+}
+
