@@ -110,3 +110,13 @@ ul {
 	font-size: 14px;
 }
 
+#search {
+	border: none;
+	height: 35px;	
+	width: 385px;
+	padding-left: 60px;
+	border-radius: 17.5px;
+	background-color: #FFF;
+	box-sizing: border-box;
+}
+
