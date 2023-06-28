@@ -144,3 +144,11 @@ ul {
 	border-bottom: 1px solid #f2f2f2;
 }
 
+.contact-box:hover {
+	background-color: #f4f5f5;
+}
+
+.active-chat {
+	background-color: #E9EBEB;
+}
+
