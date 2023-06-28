@@ -103,3 +103,10 @@ ul {
 	box-sizing: border-box;
 }
 
+#contact-search {
+	position: absolute;
+	left: 30px;
+	top: 18px;
+	font-size: 14px;
+}
+
