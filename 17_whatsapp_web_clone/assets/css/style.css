@@ -120,3 +120,7 @@ ul {
 	box-sizing: border-box;
 }
 
+#search::placeholder {
+	color: #BDC1C3;
+}
+
