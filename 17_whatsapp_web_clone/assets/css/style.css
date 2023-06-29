@@ -186,3 +186,29 @@ ul {
 	color: #4FC3F7;
 }
 
+.message-info {
+	position: absolute;
+	top: 12px;
+	right: 20px;
+	display: inline-block;
+}
+
+.message-info .message-time {
+	font-size: 12px;
+	margin-bottom: 5px;
+	color: #CCC;
+}
+
+.message-pending {
+	background-color: #09d261;
+	color: #FFF;
+	width: 19px;
+	height: 19px;
+	line-height: 19px;
+	font-size: 12px;
+	font-weight: bold;
+	border-radius: 50%;
+	text-align: center;
+	float: right;
+}
+
