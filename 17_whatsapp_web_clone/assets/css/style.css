@@ -160,3 +160,13 @@ ul {
 	width: 50px;
 }
 
+.user-info {
+	margin-left: 80px;
+	padding-top: 10px;
+	display: inline-block;
+}
+
+.user-info p, .message-info p {
+	margin: 0;
+}
+
