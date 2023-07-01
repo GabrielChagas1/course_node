@@ -1,0 +1,5 @@
+show databases => mostrar todas as bases de dados
+create database => criar um banco de dados
+drop database => remover um banco de dados
+use <nome> => usar algum banco de dados => referncia ao banco que você deseja usar
+mysqldump -u root <nomedobanco><nomedoarquivo>.sql => exportar banco de dados 
